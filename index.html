@@ -22,16 +22,121 @@
 
 	myName = 8;
 
-	let ourName = "freecodecamp";//scope only where you declare that
+	let ourName = "freecodecamp"; //scope only where you declare that
 
-	const pi = 3.14 ;//cannot change once you declare it
+	const pi = 3.14 ; //cannot change once you declare it
 
 	var a; //declaring a variable
+
+	console.log(a) //null
 
 	var b = 2; //declaring and assigning a variable
 
 	a = 7;
 
+	console.log(a) // 7
+
 	b = a;  //assign contents of a to b
+
+
+	var a = 9; //declaring = initializing
+
+	var b = 10;
+
+	var c = "I am a string ";
+
+	a = a + 1; // adding number in javascript
+
+	b = b + 5;
+
+	c = c + 10; 
+
+	var differences = 45 - 0;
+
+	var product = 8 * 0;
+
+	var quotient = 66 / 0;
+
+	/* variables are case sensitive */
+
+	//increment number 
+	var myVar = 80;
+	myVar = myVar + 1;
+
+	//alternatively
+
+	myVar++;
+
+	//decrement number 
+	myVar = myVar - 1;
+	myVar--;
+
+	//can also use decimal number. float/floating point
+
+	var remainder; 
+	reminader = 11 % 3; //remainder is 2
+
+	a = a + 12; 
+	a += 12; 
+	a -= 12; 
+
+	a /= 12;  
+	b /= 4; 
+
+	//string can either be single quotation, double quotation, or backtick
+
+	var myStr = "I am a \"double quote\" hi hi \"string\"";
+
+	console.log(myStr);
+
+	/***
+	code output
+	\' single quote
+	\" double quote
+	\\ backslash
+	\n new line
+	\r return
+	\t tab
+	\b backsapce
+	\f form feed
+
+	***/
+
+	var ourStr = "I come first. " + "I come second";
+	//outStr += "Hello again.";
+
+	var myStr = "This is the start. "
+	console.log(myStr);
+
+	var myName = "Beau";
+	var FullSentence = "My name is " + myName + " and I am well.";
+	console.log(FullSentence);
+
+	var firstName = "Ada";
+	firstNameLength = firstName.length;
+	console.log(firstNameLength);
+ 
+	var firstLetter = "";
+	firstLetter = firstName[0];
+	console.log(firstLetter);
+
+	var lastLetter = "";
+	lastLetter = firstName[2];
+	console.log(lastLetter);
+
+	//string immutability 
+	var myStr = "Jello World";
+	console.log(myStr);
+
+	myStr[0] = "H";
+	//cannot change single character in a string
+	console.log(myStr);
+
+	myStr = "Hello World";
+	console.log(myStr);
+
+	console.log(myStr.length);
+
+	
 
 </script>
