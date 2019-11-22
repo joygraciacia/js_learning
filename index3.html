@@ -1,0 +1,268 @@
+<script>
+var myGlobal = 10
+
+function fun1(a){
+	boo = 100; //becomes global
+	var test = 1000; //becomes local
+	return(a + boo + test);
+}
+
+fun1(10);
+console.log(boo);
+//console.log(test);
+console.log(fun1(200));
+
+function nextInLine(arr, item){
+
+	return item;
+}
+
+var testArr = [1, 2, 3, 4, 5];
+
+console.log(testArr);
+
+function nextInLine(arr, item){
+	arr.push(item);
+	return arr.shift();
+}
+
+console.log(nextInLine(testArr, 6));
+
+
+//can also return true or false 
+
+function ourTrueOrFalse(isItTrue){
+	if(isItTrue){
+		return "yes it is true";
+	}
+	return "no it is not";
+}
+
+console.log(ourTrueOrFalse(false));
+
+//strict equality : does not do type conversion
+/*
+3 === 3 true
+3 ==== '3' false
+
+3 == 3 true
+3 == '3' true
+
+!==
+!===
+*/
+
+function caseInSwitch(val){
+
+	var answer = "";
+	switch(val){  
+	//if(switch) value equals(case) 1
+		case 1:
+		answer = "alpha";
+		break; //no break? it will run automatically
+		case 2:
+		answer = "beta";
+		break;
+		case 3:
+		answer = "gamma";
+		break;
+		case 4:
+		answer = "delta";
+		break;
+	}
+
+	return answer;
+}
+
+console.log(caseInSwitch(1));
+console.log(caseInSwitch(2));
+console.log(caseInSwitch(3));
+console.log(caseInSwitch(4));
+
+function switchOfStuff(val){
+
+	var answer = "";
+	switch(val){  
+	//if(switch) value equals(case) 1
+		case "a":
+		answer = "apple";
+		break; //no break? it will run automatically
+		case "b":
+		answer = "bird";
+		break;
+		case "c":
+		answer = "cat";
+		break;
+		default: //else
+		answer = "stuff";
+		break;
+	
+	}
+
+	return answer;
+}
+
+console.log(switchOfStuff("a"))
+console.log(switchOfStuff("abcdef"))
+
+
+function sequentialSizes(val){
+	var answer = "";
+	switch(val){
+		case 1:
+		case 2:
+		case 3:
+			answer = "Low";
+			break;
+		case 4:
+		case 5:
+		case 6:
+			answer = "Mid";
+			break;
+		case 7:
+		case 8:
+		case 9:
+			answer = "High";
+			break;
+	}
+	return answer;
+}
+
+console.log(sequentialSizes(3));
+console.log(sequentialSizes(6));
+console.log(sequentialSizes(9));
+
+var ourDog = { //object
+	//property
+	"name": "camper", //values
+	"legs": 4,
+	"tails": 1,
+	"friends": ["everything!"]
+};
+
+var myDog = {
+	"name": "cquincy", 
+	"legs": 3,
+	"tails": 1,
+	"friends": ["no friends!"]
+}
+
+var hatValue = ourDog.name;
+console.log(hatValue);
+console.log(ourDog.friends);
+console.log(ourDog['tails']);
+
+ourDog.name = "Happy camper";
+console.log(ourDog.name);
+
+ourDog.bark = "bark!!";
+console.log(ourDog['bark']);
+
+delete ourDog.bark;
+console.log(ourDog.bark);
+
+//using objects for lookup 
+function phoneticLookup(val){
+
+var result = ""
+
+var lookup = {
+	"alpha": "Adams",
+	"bravo": "Boston",
+	"charlie": "Chicago",
+	"delta": "Denver",
+	"echo": "Easy",
+	"foxtrot": "Frank"
+};
+
+result = lookup[val];
+
+return result;
+
+}
+
+console.log(phoneticLookup("charlie"));
+
+
+var myObj = {
+	gift: "pony",
+	pet: "kitten",
+	bed: "sleigh"
+};
+
+function checkObj(checkProp){
+	if(myObj.hasOwnProperty(checkProp)){
+		return myObj[checkProp];
+	}else{
+		return "Not Found";
+	}
+}
+
+
+console.log(checkObj("gift"));
+
+
+//complex objects 
+
+var myMusic = [
+
+	{
+		"artist": "billy joel",
+		"title": "piano man",
+		"release_year": 1973,
+		"formats": [
+		"CD",
+		"8T",
+		"LP"],
+		"gold": true
+	},
+	{
+		"artists": "beau carnes",
+		"title": "cereal man",
+		"release_year":2018
+	}
+
+
+];
+
+var  myStorage = {
+	"car": {
+		"inside": {
+			"glove box": "maps",
+			"passenger seat": "crumbs"
+		},
+		"outside":{
+			"trunk": "junk"
+		}
+	}
+};
+
+
+var gloveBoxContents = myStorage.car.inside["glove box"];
+console.log(gloveBoxContents);
+
+
+var myPlants = [
+	{
+		type: "flowers",
+		list:[
+			"rose",
+			"tulip",
+			"dandelion"
+		]
+	},
+	{
+		type: "trees",
+		list:[
+			"fir",
+			"pine",
+			"birch"
+		]
+	}
+];
+
+var secondTree = myPlants[1].list[1];
+console.log(secondTree);
+
+
+</script>
