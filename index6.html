@@ -1,0 +1,86 @@
+<script>
+
+function randomFraction(){
+	
+	return Math.random();
+}
+
+
+console.log(randomFraction());
+
+
+function randomWholeNum(){
+//between 0 and 10
+	return Math.floor(Math.random()*10);
+}
+
+
+console.log(randomWholeNum());
+
+function ourRange(ourMin, ourMax){
+
+	return Math.floor( Math.random() * ( ourMax - ourMin + 1 ) ) + ourMin;
+}
+
+ourRange(1, 9);
+
+
+function convertToInteger(str){
+
+	return parseInt(str);
+
+}
+
+console.log(convertToInteger("56"));
+
+console.log(convertToInteger("bam"));
+
+//function convertToInterger(str){
+
+//	return parseInt(str, 2)
+//}
+
+//convertToInteger("1011");
+
+// ternary statement
+
+function checkEqual(a, b){
+
+	// if(a === b){
+
+	// 	return true;
+
+	// }else{
+
+	// 	return false;
+
+	// }
+
+	return a === b ? true : false;
+}
+
+// multiple tenary statement 
+
+function checkSign(num){
+	return num > 0 ? "positive" : num < 0 ? "negative" : "zero"
+}
+
+
+//constants
+
+const MATH_CONSTANTS = {
+	PI: 3.14
+};
+
+Object.freeze(MATH_CONSTANTS);
+
+
+console.log(checkEqual(1, 1));
+
+const magic = () => new Date();
+
+// map?? filter?? reduce?? 
+// ... args
+
+
+</script>

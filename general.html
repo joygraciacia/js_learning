@@ -1,0 +1,48 @@
+<html>
+<head><title></title></head>
+
+<meta charset = "UTF-8">
+<meta name = "viewport" content = "width = device-width, initial-scale =1.0 ">
+
+<link rel = "stylesheet" href = "boostrap.css">
+<style>
+#a
+	{
+		background-color: red;
+		height: 400px;
+		width: 400px;
+
+	}
+#c  {
+		background-color: yellow;
+		height: 100px;
+		width: 100px;
+
+	}
+	body {
+		background-color : powderblue;
+	}
+</style>
+<script>
+	function b(){
+		var a = document.getElementById("a");
+		alert(a.getAttribute("data-c"));
+	}
+
+	function c(){
+		var c = document.getElementById("c");
+		alert(c.getAttribute("data-d"));
+	}
+	
+</script>
+<body>
+	<h1> General </h1>
+
+	<div id = "a" onclick = "b()" data-c = "xxxxxx">
+	<br>
+	<div id = "c" onclick = "c()" data-d = "helo">
+
+	</div>
+	</div>
+</body>
+</html>
